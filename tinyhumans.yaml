@@ -1,0 +1,12 @@
+namespace: tinyhumans
+tinyhumans:
+  defines: runnable
+  metadata:
+    name: tinyhumans
+    description: >-
+      Tiny Humans is a little interactive sandbox for tiny people, tiny
+      thoughts, and their tiny stories
+    icon: https://tinyhumans.vercel.app/scenes/cover.png
+  containers:
+    tinyhumans:
+      build: .
