@@ -1,0 +1,5 @@
+namespace: tinyhumans
+
+stack:
+  defines: group
+  members: []
