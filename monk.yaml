@@ -1,0 +1,28 @@
+namespace: tinyhumans
+
+tiny-humans:
+  defines: runnable
+  metadata:
+    name: tiny-humans
+    description: A static single-page application written in Oak.
+    icon: https://emojiapi.dev/api/v1/robot.svg
+  containers:
+    tiny-humans:
+      image: env-2059.registry.local/tiny-humans:main-5909b37
+      build: .
+      dockerfile: Dockerfile.tiny-humans
+  services:
+    http:
+      description: HTTP traffic
+      container: tiny-humans
+      port: 80
+      host-port: 80
+      publish: true
+      protocol: tcp
+  connections: {}
+  variables: {}
+
+stack:
+  defines: group
+  members:
+    - tinyhumans/tiny-humans

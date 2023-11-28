@@ -1,0 +1,6 @@
+FROM nginx:alpine
+COPY ./index.html /usr/share/nginx/html
+COPY ./bundle.js /usr/share/nginx/html
+COPY ./paper.jpg /usr/share/nginx/html
+COPY ./scenes/ /usr/share/nginx/html/scenes/
+EXPOSE 80
